@@ -1,0 +1,77 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>cz.lubosvr.spring.cache</groupId>
+	<artifactId>liferay-spring-cache</artifactId>
+	<version>1.0.0-SNAPSHOT</version>
+	<name>liferay-spring-cache-lib</name>
+	<packaging>jar</packaging>
+	<url>http://maven.apache.org</url>
+
+	<properties>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+		<project.spring.version>4.0.5.RELEASE</project.spring.version>
+		<project.liferay.version>6.2.3</project.liferay.version>
+	</properties>
+
+	<!--<distributionManagement>-->
+	<!--<repository>-->
+	<!--<id>tmcz-releases</id>-->
+	<!--<url>http://vdsdsvn.cz.tmo/nexus/content/repositories/releases</url>-->
+	<!--</repository>-->
+	<!--<snapshotRepository>-->
+	<!--<id>tmcz-snapshots</id>-->
+	<!--<url>http://vdsdsvn.cz.tmo/nexus/content/repositories/snapshots</url>-->
+	<!--<uniqueVersion>false</uniqueVersion>-->
+	<!--</snapshotRepository>-->
+	<!--</distributionManagement>-->
+	<!--<scm>-->
+	<!--<connection>scm:svn:https://svn.cz.tmo:8443/cSVN_ComChan/portal/applications/portal-commons/authentication/authentication-lib/trunk</connection>-->
+	<!--</scm>-->
+
+	<dependencyManagement>
+		<dependencies>
+			<dependency>
+				<groupId>log4j</groupId>
+				<artifactId>log4j</artifactId>
+				<version>1.2.16</version>
+			</dependency>
+			<dependency>
+				<groupId>org.springframework</groupId>
+				<artifactId>spring-context</artifactId>
+				<version>${project.spring.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>com.liferay.portal</groupId>
+				<artifactId>portal-service</artifactId>
+				<version>${project.liferay.version}</version>
+			</dependency>
+		</dependencies>
+	</dependencyManagement>
+
+	<dependencies>
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-context</artifactId>
+			<scope>provided</scope>
+		</dependency>
+		<dependency>
+			<groupId>com.liferay.portal</groupId>
+			<artifactId>portal-service</artifactId>
+			<scope>provided</scope>
+		</dependency>
+	</dependencies>
+
+	<build>
+		<plugins>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-compiler-plugin</artifactId>
+				<version>2.0.2</version>
+				<configuration>
+					<source>1.6</source>
+					<target>1.6</target>
+				</configuration>
+			</plugin>
+		</plugins>
+	</build>
+</project>
