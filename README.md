@@ -1,14 +1,14 @@
 # LiferaySpringCache
 Simple library to implement Spring Caching mechanism which use Liferay's cache as caching storage
 
-Example of usage:
-    <bean id="cacheManager" class="org.springframework.cache.support.SimpleCacheManager">
-        <property name="caches">
-            <set>
-                <bean class="eu.ibacz.articleread.core.LiferayMultiVMCacheFactoryBean" name="cacheNameMultiNonBlock" />
-                <bean class="eu.ibacz.articleread.core.LiferaySingleVMCacheFactoryBean" name="cacheNameSingleBlock">
-                    <property name="blocking" value="true" />
-                </bean>
-            </set>
-        </property>
-    </bean>
+Example of usage:<br>
+    &lt;bean id="cacheManager" class="org.springframework.cache.support.SimpleCacheManager"&gt;<br>
+        &nbsp;&lt;property name="caches"&gt;<br>
+            &nbsp;&nbsp;&lt;set&gt;<br>
+                &nbsp;&nbsp;&nbsp;&lt;bean class="eu.ibacz.articleread.core.LiferayMultiVMCacheFactoryBean" name="cacheNameMultiNonBlock" /&gt;<br>
+                &nbsp;&nbsp;&nbsp;&lt;bean class="eu.ibacz.articleread.core.LiferaySingleVMCacheFactoryBean" name="cacheNameSingleBlock"&gt;<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&lt;property name="blocking" value="true" /&gt;<br>
+                &nbsp;&nbsp;&nbsp;&lt;/bean&gt;<br>
+            &nbsp;&nbsp;&lt;/set&gt;<br>
+        &nbsp;&lt;/property&gt;<br>
+    &lt;/bean&gt;<br>
